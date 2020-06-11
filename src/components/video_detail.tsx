@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { getVideoComments } from "src/redux/actions";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { ReduxState } from "src/redux/reducers";
 import VideoComments from "./video_comments";
 import "../styles/video.scss";
@@ -17,7 +17,7 @@ const VideoDetail = ({ video }: Props) => {
   }, [video?.id.videoId]);
 
   const comments = useSelector<ReduxState, any[]>(
-    ({ videos }) => videos.comments
+    ({ videos }) => videos.comments,
   );
 
   if (!video) {
@@ -39,13 +39,15 @@ const VideoDetail = ({ video }: Props) => {
       <div className="details">
         <div className='title'>{video.snippet.title}</div>
         <div className='channel'>
-         <h4 className='description'>{video.snippet.description}</h4>
+          <h4 className='description'>{video.snippet.description}</h4>
         </div>
-        {comments.map((a, i) => (
-          <div key={i}>
-            <VideoComments comment={a} />
-          </div>
-        ))}
+        <div className='comment-box'>
+          {comments.map((a, i) => (
+            <div key={i}>
+              <VideoComments comment={a}/>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

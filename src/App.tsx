@@ -4,6 +4,7 @@ import _ from "lodash";
 import SearchBar from "./components/search_bar";
 import VideoList from "./components/video_list";
 import VideoDetail from "./components/video_detail";
+import "./styles/app.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getVideos } from "./redux/actions";
 import { YouTubeSearchResults } from "youtube-api-search";
@@ -12,10 +13,8 @@ import { ReduxState } from "./redux/reducers";
 const App = () => {
   const dispatch = useDispatch();
 
-  const selectedVideo = useSelector<
-    ReduxState,
-    YouTubeSearchResults | undefined
-  >(({ videos }) => videos.selectedVideo);
+  const selectedVideo = useSelector<ReduxState,
+    YouTubeSearchResults | undefined>(({ videos }) => videos.selectedVideo);
 
   /**
    * Lifecycle method that is being called just after the component did mount
@@ -32,10 +31,12 @@ const App = () => {
   }, 300);
 
   return (
-    <div>
-      <SearchBar onSearchTermChange={videoSearch} />
-      <VideoDetail video={selectedVideo} />
-      <VideoList />
+    <div className='youtube'>
+      <SearchBar onSearchTermChange={videoSearch}/>
+      <div className="section">
+        <VideoDetail video={selectedVideo}/>
+        <VideoList/>
+      </div>
     </div>
   );
 };

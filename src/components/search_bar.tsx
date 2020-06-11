@@ -1,17 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { getVideos } from "../redux/actions";
-import { useDispatch } from "react-redux";
+import React, { useState } from "react";
 
 interface Props {
   onSearchTermChange: (arg: string) => void;
 }
 
 const SearchBar = (props: Props) => {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(getVideos("liverpool"));
-  }, []);
 
   const { onSearchTermChange } = props;
   const [term, setTerm] = useState<string>("");
@@ -30,6 +23,8 @@ const SearchBar = (props: Props) => {
     <div className="search-bar">
       <input
         value={term}
+        className='form-control'
+        placeholder='What are you looking for?'
         onChange={(event) => onInputChange(event.target.value)}
       />
     </div>

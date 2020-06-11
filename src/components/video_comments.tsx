@@ -14,7 +14,6 @@ const VideoComments = (props: Props) => {
 
 
   return (
-    <>
       <div className='comment-section'>
 
         <div className='icon'>
@@ -31,7 +30,6 @@ const VideoComments = (props: Props) => {
           </div>
         </div>
       </div>
-    </>
   );
 };
 
