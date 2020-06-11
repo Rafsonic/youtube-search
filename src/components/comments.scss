@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.comment-section {
+  margin-top: 1.5rem;
+  display: flex;
+  font-family: Roboto, 'sans-serif';
+
+  .content {
+    margin: 0 0 0 1rem;
+    color: #030303;
+
+    .author {
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 0;
+      margin-right: .7rem;
+
+      .published {
+        font-weight: 400;
+        font-size: 13px;
+      }
+    }
+
+    .comment {
+      font-weight: 400;
+      line-height: 20px;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .likes {
+      color: #606060;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 18px;
+      display: flex;
+      margin-top: .5rem;
+
+        .number {
+          margin-left: 5px;
+        }
+    }
+  }
+}
+

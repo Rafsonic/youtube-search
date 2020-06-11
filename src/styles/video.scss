@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.video-detail {
+  color: #030303;
+  font-family: Roboto, 'sans-serif';
+
+  .details {
+    margin: 1.5rem 0;
+
+    .title {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 24px;
+      color: #030303;
+    }
+
+    .channel {
+      margin: 1rem 0;
+      display: flex;
+
+      .description {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+      }
+    }
+  }
+}
