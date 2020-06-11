@@ -21,7 +21,7 @@ const VideoDetail = ({ video }: Props) => {
   );
 
   if (!video) {
-    return <div>Loading...</div>;
+    return null;
   }
 
   const videoId = video.id.videoId;

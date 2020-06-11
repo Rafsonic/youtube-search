@@ -1,5 +1,5 @@
 import React from "react";
-import "./comments.scss";
+import "../styles/comments.scss";
 import moment from "moment";
 import { FaRegThumbsUp } from 'react-icons/fa';
 

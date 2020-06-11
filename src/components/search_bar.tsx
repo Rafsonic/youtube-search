@@ -1,10 +1,14 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { getVideos } from "../redux/actions";
 
 interface Props {
   onSearchTermChange: (arg: string) => void;
 }
 
 const SearchBar = (props: Props) => {
+
+  const dispatch = useDispatch();
 
   const { onSearchTermChange } = props;
   const [term, setTerm] = useState<string>("");
@@ -14,7 +18,7 @@ const SearchBar = (props: Props) => {
    * @param {*} term
    */
   const onInputChange = (term: string) => {
-    console.log(term);
+    dispatch(getVideos(term));
     setTerm(term);
     onSearchTermChange(term);
   };

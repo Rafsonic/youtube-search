@@ -29,7 +29,6 @@ const videoSearchFn = async (term: string) => {
 };
 
 const getVideoCommentsCall = (videoId: string) => {
-  console.log(videoId);
   return axios
     .get(
       `https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&videoId=${videoId}&key=${process.env.REACT_APP_API_KEY}`
