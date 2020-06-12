@@ -1,7 +1,23 @@
 .youtube {
+  margin-bottom: 8.5rem;
   .search-bar {
-    padding: 40px;
-    background: #48866f;
+    padding: 40px 72px;
+    background: #343a40;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+
+    .navbar {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .logo {
+    max-width: 80px;
   }
 
   .section {

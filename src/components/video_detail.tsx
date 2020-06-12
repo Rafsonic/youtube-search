@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { ReduxState } from "src/redux/reducers";
 import VideoComments from "./video_comments";
 import "../styles/video.scss";
+import loader from "../assets/loader.gif";
 
 interface Props {
   video?: any;
@@ -21,7 +22,9 @@ const VideoDetail = ({ video }: Props) => {
   );
 
   if (!video) {
-    return null;
+    return (<>
+            <img src={loader} alt='youtube' className='logo' />
+          </>);
   }
 
   const videoId = video.id.videoId;

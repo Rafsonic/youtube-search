@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getVideos } from "../redux/actions";
+import youtubeLogo from "../assets/logos/youtube.png";
 
 interface Props {
   onSearchTermChange: (arg: string) => void;
@@ -24,7 +25,12 @@ const SearchBar = (props: Props) => {
   };
 
   return (
-    <div className="search-bar">
+    <div className="search-bar flex">
+      <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark pl-0">
+        <a className="navbar-brand" >
+          <img src={youtubeLogo} alt='youtube' className='logo' />
+        </a>
+      </nav>
       <input
         value={term}
         className='form-control'
