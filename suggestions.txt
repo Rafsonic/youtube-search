@@ -1,0 +1,6 @@
+Improvement suggestions:
+
+1) Use next.js and server side rendering.
+2) Set infinity scroll on comments by loading automatically the next page of comments.
+3) Opportunity to login via google account add comments.
+4) Improve user interface and responsiveness for mobile devices.
